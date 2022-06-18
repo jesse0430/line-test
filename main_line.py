@@ -128,7 +128,7 @@ def handle_message(event):
                          text=' ',
                          actions=[
                              MessageAction(
-                                 label='教學內容',
+                                 label='教學',
                                  text='Telegrame申請與串接'
                              ),
                              URIAction(

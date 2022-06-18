@@ -1,0 +1,8 @@
+fake-useragent==0.1.11
+Flask==2.1.2
+line-bot-sdk==2.2.1
+pandas==1.4.2
+PyMySQL==1.0.2
+requests==2.27.1
+linesdk==0.0.11
+python-dateutil==2.8.2

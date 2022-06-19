@@ -46,7 +46,7 @@ def handle_message(event):
                     actions=[
                         PostbackTemplateAction(
                             label='北屯',
-                            text=answer=='hihi',
+                            text='北屯',
                             data='北屯',
                             
                         ),

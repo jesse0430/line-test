@@ -14,7 +14,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi(os.environ.get("CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.environ.get("CHANNEL_SECRET"))
 
-data=pd.read_csv('/app/永慶_北屯區.csv')
+data=pd.read_csv('永慶_北屯區.csv')
 
 @app.route("/", methods=["GET", "POST"])
 def callback():

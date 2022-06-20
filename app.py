@@ -7,11 +7,16 @@ from flask import Flask, abort, request
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
+import pymysql
+import pandas as pd
 
 app = Flask(__name__)
 
 line_bot_api = LineBotApi(os.environ.get("CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.environ.get("CHANNEL_SECRET"))
+
+con=pymysql.connect(host="44.206.61.201",user="dv102",password="dv102",db="house_info")
+data=pd.read_sql("SELECT * FROM `北屯買賣",con)
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -76,7 +81,7 @@ def handle_message(event):
                                     columns=[
                      CarouselColumn(
                          thumbnail_image_url='https://www.google.com/imgres?imgurl=https%3A%2F%2Fdvblobcdnjp.azureedge.net%2F%2FContent%2FUpload%2FPopular%2FImages%2F2018-10%2Ffa132452-c08d-4ccc-b7f9-2ca3e1f0941b_m.jpg&imgrefurl=https%3A%2F%2Fdailyview.tw%2FPopular%2FDetail%2F3071&tbnid=biebrUdHNEWHiM&vet=12ahUKEwjolLf34qr4AhUE6ZQKHUH7BWQQMygMegUIARDRAQ..i&docid=b3EFFa4mCYjMyM&w=940&h=650&q=%E9%80%8F%E5%A4%A9%E5%8E%9D&ved=2ahUKEwjolLf34qr4AhUE6ZQKHUH7BWQQMygMegUIARDRAQ',
-                         title='透天',
+                         title=data.iloc[0,1],
                          text=' ',
                          actions=[
                              MessageAction(

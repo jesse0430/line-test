@@ -11,7 +11,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('K7YQWqYBaK+538DTXej0lvb4qn6/Utjeurh7b63/Nf7W+08KUPwqHryLUFsBkkNcmOmlH3Z1ihsJ6aXPl8Lwn3iyaVw6FeMl9IVOYm5i/aIz1hDxxfq6J6sFhJzG2ojhcnoYfFZ3DOSBbwVL2fR5qAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('4fba40457b5c8acbd51bcf10ac99ee38')
 
-data.read_csv(信義_北屯區.csv)
+# data.read_csv(信義_北屯區.csv)
 # print(data.head(3))
 
 @app.route("/callback", methods=['POST'])

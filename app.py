@@ -11,23 +11,8 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('K7YQWqYBaK+538DTXej0lvb4qn6/Utjeurh7b63/Nf7W+08KUPwqHryLUFsBkkNcmOmlH3Z1ihsJ6aXPl8Lwn3iyaVw6FeMl9IVOYm5i/aIz1hDxxfq6J6sFhJzG2ojhcnoYfFZ3DOSBbwVL2fR5qAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('4fba40457b5c8acbd51bcf10ac99ee38')
 
-# con=pymysql.connect(host="44.206.61.201",user="dv102",password="dv102",db="house_info")
-# data=pd.read_sql("SELECT * FROM `北屯買賣",con)
-# filt=data['house_type']=='公寓'
-# print(data.loc[filt])
+data.read_csv(信義_北屯區.csv)
 # print(data.head(3))
-
-#pymysql
-# db = pymysql.connect(host='44.206.61.201',
-#                      user='dv102',
-#                      password='dv102',
-#                      database='house_info')
-# cursor = db.cursor()
-# cursor.execute("SELECT * FROM `北屯買賣`")
-# data = cursor.fetchall()
-# df=pd.DataFrame(list(data))
-# print (df.head(10))
-# db.close()
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -94,7 +79,7 @@ def handle_message(event):
                                     columns=[
                      CarouselColumn(
                          thumbnail_image_url='https://www.google.com/imgres?imgurl=https%3A%2F%2Fdvblobcdnjp.azureedge.net%2F%2FContent%2FUpload%2FPopular%2FImages%2F2018-10%2Ffa132452-c08d-4ccc-b7f9-2ca3e1f0941b_m.jpg&imgrefurl=https%3A%2F%2Fdailyview.tw%2FPopular%2FDetail%2F3071&tbnid=biebrUdHNEWHiM&vet=12ahUKEwjolLf34qr4AhUE6ZQKHUH7BWQQMygMegUIARDRAQ..i&docid=b3EFFa4mCYjMyM&w=940&h=650&q=%E9%80%8F%E5%A4%A9%E5%8E%9D&ved=2ahUKEwjolLf34qr4AhUE6ZQKHUH7BWQQMygMegUIARDRAQ',
-                         title='透天',
+                         title=data.iloc[0,1],
                          text=' ',
                          actions=[
                              MessageAction(

@@ -1,6 +1,5 @@
 import requests, re, random
 import pandas as pd
-from bs4 import BeautifulSoup
 from flask import Flask, request, abort
 from linebot import (
     LineBotApi, WebhookHandler

@@ -294,7 +294,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='想看幾歲的房子呢？',
                 text='請選擇條件',
-                thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXr4wQoYE2lB2WElB4m-tTY99ZQp8dmQdv0A&usqp=CAU',
+                thumbnail_image_url='https://cw1.tw/CW/images/article/201709/article-59ba87dddac50.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='10年以下',
@@ -324,7 +324,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='想看多大的房子呢？',
                 text='請選擇條件',
-                thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXr4wQoYE2lB2WElB4m-tTY99ZQp8dmQdv0A&usqp=CAU',
+                thumbnail_image_url='https://cw1.tw/CW/images/article/201709/article-59ba87dddac50.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='20坪以下',
@@ -354,7 +354,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='想依什麼條件篩選？',
                 text='請選擇條件',
-                thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXr4wQoYE2lB2WElB4m-tTY99ZQp8dmQdv0A&usqp=CAU',
+                thumbnail_image_url='https://cw1.tw/CW/images/article/201709/article-59ba87dddac50.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='1000萬以下',
@@ -384,7 +384,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='想查單價多少錢的物件呢？',
                 text='請選擇條件',
-                thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXr4wQoYE2lB2WElB4m-tTY99ZQp8dmQdv0A&usqp=CAU',
+                thumbnail_image_url='https://cw1.tw/CW/images/article/201709/article-59ba87dddac50.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='20萬以下',

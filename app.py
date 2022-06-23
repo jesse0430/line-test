@@ -50,10 +50,6 @@ def handle_message(event):
 
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if event.message.text != "jhckjewfhgnlkgjlk":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage('請輸入\"我要查詢\"開始體驗'))
-       line_bot_api.reply_message(event.reply_token, buttons_template)
-        return 0
     if event.message.text == "我要查詢":
         carousel_template_message = TemplateSendMessage(
             alt_text='台中 template',
